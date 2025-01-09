@@ -37,9 +37,9 @@ Our implementation of AIA for t-way testing involves the following steps:
 To run the algorithm, configure the following inputs in the script:
 
   ```python
-t = 2  # Strength of interaction
-population_size = 20
-max_iterations = 75
+t = 3  
+population_size = 50
+max_iterations = 100
 parameters = [
     ['a1', 'a2', 'a3'],
     ['b1', 'b2', 'b3'],
@@ -48,3 +48,26 @@ parameters = [
 ]
 forbidden_combinations = []
 
+```
+With forbidden combination
+
+```python
+
+t = 2
+population_size = 25
+max_iterations = 75
+parameters = [
+    ['a1', 'a2', 'a3'],
+    ['b1', 'b2', 'b3'],
+    ['c1', 'c2', 'c3'],
+]
+forbidden_combinations = [
+[(1, 'b3'), (2, 'c1')], 
+[(1, 'b2'), (2, 'c1')],  
+[(0, 'a1'), (2, 'c2')]
+]
+
+```
+
+## Contributions
+Contributions are welcome! Open an issue or submit a pull request to improve this repository.
